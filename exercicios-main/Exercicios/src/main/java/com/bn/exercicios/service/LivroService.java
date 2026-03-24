@@ -11,18 +11,18 @@ import java.util.List;
 public class LivroService {
 
     @Autowired
-    private LivroRepository alunoRepository;
+    private LivroRepository livroRepository;
 
     public Livro criarLivro(Livro livro){
-        return  alunoRepository.save(livro);
+        return  livroRepository.save(livro);
     }
 
     public List<Livro> findAll(){
-        return  alunoRepository.findAll();
+        return  livroRepository.findAll();
     }
 
     public void deletarLivro(Long id){
-        alunoRepository.deleteById(id);
+        livroRepository.deleteById(id);
     }
 
 
