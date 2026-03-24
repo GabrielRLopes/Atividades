@@ -15,7 +15,7 @@ public class LivroController {
     private LivroService  livroService;
 
     @PostMapping
-    public Livro criarAluno(@RequestBody Livro livro){
+    public Livro criarLivro(@RequestBody Livro livro){
         return  livroService.criarLivro(livro);
     }
 
