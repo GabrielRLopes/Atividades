@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class FornecedorService {
@@ -19,6 +20,10 @@ public class FornecedorService {
 
     public List<Fornecedor> findAll(){
         return  fornecedorRepository.findAll();
+    }
+
+    public Optional<Fornecedor> buscarid(Long id){
+        return  fornecedorRepository.findById(id);
     }
 
     public void deletarFornecedor(Long id){

@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class DepartamentoService {
@@ -19,6 +20,10 @@ public class DepartamentoService {
 
     public List<Departamento> findAll(){
         return  departamentoRepository.findAll();
+    }
+
+    public Optional<Departamento> buscarid(Long id){
+        return  departamentoRepository.findById(id);
     }
 
     public void deletarDepartamento(Long id){

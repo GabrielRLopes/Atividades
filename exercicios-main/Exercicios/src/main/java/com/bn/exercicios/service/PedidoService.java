@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PedidoService {
@@ -19,6 +20,10 @@ public class PedidoService {
 
     public List<Pedido> findAll(){
         return  pedidoRepository.findAll();
+    }
+
+    public Optional<Pedido> buscarid(Long id){
+        return  pedidoRepository.findById(id);
     }
 
     public void deletarPedido(Long id){
