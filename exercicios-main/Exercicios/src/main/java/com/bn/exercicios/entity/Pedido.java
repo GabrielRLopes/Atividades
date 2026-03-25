@@ -13,7 +13,11 @@ public class Pedido {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="DataPedido")
     private LocalDateTime data;
+
+    @Column(name="ValorPedido")
     private BigDecimal valorTotal;
     private String status;
 

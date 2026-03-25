@@ -12,7 +12,11 @@ public class Tarefa {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="DescricaoTarefa")
     private String descricao;
+
+    @Column(name="PrazoTarefa")
     private LocalDate dataVencimento;
     private boolean concluida;
 

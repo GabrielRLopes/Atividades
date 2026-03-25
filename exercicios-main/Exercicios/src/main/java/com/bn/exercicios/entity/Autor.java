@@ -12,7 +12,11 @@ public class Autor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="NomeAutor")
     private String nome;
+
+    @Column(name="NacionalidadeAutor")
     private String nacionalidade;
     private LocalDate dataNascimento;
 

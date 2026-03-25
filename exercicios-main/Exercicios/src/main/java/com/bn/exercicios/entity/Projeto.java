@@ -12,7 +12,11 @@ public class Projeto {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="NomeProjeto")
     private String nome;
+
+    @Column(name="ComeçoProjeto")
     private LocalDate dataInicio;
     private LocalDate dataFim;
 

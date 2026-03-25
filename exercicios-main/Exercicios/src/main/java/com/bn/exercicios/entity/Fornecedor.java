@@ -9,7 +9,11 @@ public class Fornecedor {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="NomeFornecedor")
     private String nomeFantasia;
+
+    @Column(name="CNPJFornecedor")
     private String cnpj;
     private String contato;
 

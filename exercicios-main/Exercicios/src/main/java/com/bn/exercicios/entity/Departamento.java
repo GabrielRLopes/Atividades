@@ -9,7 +9,11 @@ public class Departamento {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name="NomeDepartamento")
     private String nome;
+
+    @Column(name="LocalizacaoDepartamento")
     private String localizacao;
 
     public Departamento(){
